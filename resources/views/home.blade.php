@@ -2,15 +2,21 @@
 
 @section('metaTitle', 'Home')
 @section('content')
-  <div class="container">
-    <h1>Benvenuti!</h1>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        ciao
-      </div>
+  <div class="main_container">
+    <div>
+        <div class="card_container">
+           
+            @foreach ($comics as $comic)
+                
+            <div class="card">
+                <a href="#">
+                    <img src="{{$comic['thumb']}}" alt="{{$comic['series']}}">
+                    <h5>{{ $comic['series'] }}</h5>
+                </a>
+            </div>
+            @endforeach
+          </div>
     </div>
-  </div>
+
+</div>
 @endsection

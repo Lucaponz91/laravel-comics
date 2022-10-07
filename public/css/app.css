@@ -42,3 +42,20 @@ a {
   color: currentColor;
   text-decoration: none;
 }
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.card {
+  height: 240px;
+}
+.card img {
+  width: 190px;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
