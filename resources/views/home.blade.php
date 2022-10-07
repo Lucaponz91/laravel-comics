@@ -2,12 +2,12 @@
 
 @section('metaTitle', 'Home')
 @section('content')
-  <div class="main_container">
+<div class="main_container">
     <div>
         <div class="card_container">
-           
+
             @foreach ($comics as $comic)
-                
+
             <div class="card">
                 <a href="#">
                     <img src="{{$comic['thumb']}}" alt="{{$comic['series']}}">
@@ -15,7 +15,7 @@
                 </a>
             </div>
             @endforeach
-          </div>
+        </div>
     </div>
 
 </div>
