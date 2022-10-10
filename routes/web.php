@@ -19,5 +19,15 @@ Route::get('/', function () {
 });
 
 Route::get('/comics/{id}', function($id){
-    return $id;
-});
+     $comics = config('comics');
+     if($id < count($comics)){
+        $comic = $comics[$id];
+        $data = [
+            'comic' => $comic
+        ];
+        return view('comics.show', $data);
+
+     } else {
+        abort(404);
+     }
+})->where('id', '[0-9]+');
