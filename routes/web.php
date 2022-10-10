@@ -30,4 +30,4 @@ Route::get('/comics/{id}', function($id){
      } else {
         abort(404);
      }
-})->where('id', '[0-9]+');
+})->where('id', '[0-9]+')->name('fumetto');

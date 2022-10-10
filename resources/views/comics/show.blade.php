@@ -1,11 +1,13 @@
 @extends('layouts.app')
-@section('metaTitle','Dettaglio Fumetto')
+@section('metaTitle',$comic['title'])
 
 @section('content')
-
-
-<h1>Dettaglio fumetto</h1>
-@dump($comic)
-
-
+<div>
+    <div>
+        <h1>{{$comic['title']}}</h1>
+        <h4>{{$comic['price']}}</h4>
+        <p>{{$comic['description']}} </p>
+    </div>
+    <img src="" alt="">
+</div>
 @endsection
